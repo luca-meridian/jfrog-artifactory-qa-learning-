@@ -38,7 +38,7 @@ Enter the following details:
 
 Leave the remaining settings at their defaults.
 
-![Repository configuration](../images/05-repository-configuration.png)
+![Repository configuration](../images/07-repository-configuration.png)
 
 *Configuring our new local repository.*
 
@@ -50,7 +50,7 @@ Once created, open the **Artifacts** section of Artifactory.
 
 You should now see `qa-test-builds` listed.
 
-![New repository](../images/05-repository-created.png)
+![New repository](../images/08-repository-created.png)
 
 *Our new repository, ready to store artifacts.*
 
