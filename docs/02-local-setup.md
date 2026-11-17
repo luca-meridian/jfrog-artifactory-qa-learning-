@@ -321,3 +321,53 @@ The initial installation demonstrated several useful troubleshooting principles:
 6. **Use application logs to diagnose problems.** Logs often reveal the underlying cause more clearly than browser error messages.
 
 These principles apply beyond JFrog Artifactory and are useful when troubleshooting test environments, containerised applications and CI/CD infrastructure.
+
+## Troubleshooting: Slow Artifactory UI
+
+After installing Artifactory OSS, I noticed that the web interface was extremely slow. Some pages and menus took a long time to load, despite Docker having sufficient CPU and memory available.
+
+### What Was Causing It?
+
+The issue appeared to be related to **JFConnect**, a JFrog service used for platform connectivity and entitlement information.
+
+The logs showed the following error:
+
+```text
+First-time entitlement fetch failed:
+12 UNIMPLEMENTED: Received HTTP status code 404
+```
+
+Other Artifactory OSS users have reported similar performance issues.
+
+### The Fix
+
+Disabling JFConnect made a noticeable improvement to the interface's performance.
+
+In the `artifactory` service's `environment` section of `compose.yaml`, add:
+
+```yaml
+JF_JFCONNECT_ENABLED: "false"
+```
+
+Then apply the updated configuration:
+
+```bash
+docker compose up -d --no-deps --force-recreate artifactory
+```
+
+This recreates the Artifactory container with the new setting while preserving the PostgreSQL service and existing Docker volumes.
+
+Once Artifactory has restarted, open:
+
+**http://localhost:8082/ui/**
+
+### Result
+
+After making this change, the Artifactory interface became significantly more responsive.
+
+This resolved the slow UI behaviour in my local setup, although it may not be the cause of performance issues in every installation.
+
+### References
+
+- [JFrog GitHub — Related JFConnect issue](https://github.com/jfrog/charts/issues/2233)
+- [Stack Overflow — Artifactory OSS Self-Hosted Web GUI Extremely Slow](https://stackoverflow.com/questions/80007258/artifactory-oss-self-hosted-webgui-extremely-slow)
