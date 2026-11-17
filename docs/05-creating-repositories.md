@@ -46,9 +46,9 @@ Save the repository.
 
 ## Checking the Repository
 
-Once created, open the **Artifacts** section of Artifactory.
+Once created, navigate to **Platform → Artifactory → Artifacts**.
 
-You should now see `qa-test-builds` listed.
+You should now see `qa-test-builds` listed in the repository browser.
 
 ![New repository](../images/08-repository-created.png)
 
