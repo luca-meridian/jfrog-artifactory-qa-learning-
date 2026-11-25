@@ -23,8 +23,7 @@ No previous experience with JFrog is needed.
 | [02 - Local Setup](docs/02-local-setup.md) | Running Artifactory locally |
 | [03 - Artifactory UI](docs/03-artifactory-ui.md) | Finding your way around |
 | [04 - Repositories](docs/04-repository-types.md) | Understanding repository types |
-| [05 - Managing Artifacts](docs/06-managing-artifacts.md) | Uploading and downloading files |
-| [06 - Artifactory for QA](docs/07-artifactory-for-qa.md) | How it fits into testing workflows |
+| [05 - Creating Repositories](docs/05-creating-repositories.md) | Creating repositorys |
 
 More notes and examples will be added as I work through them.
 
