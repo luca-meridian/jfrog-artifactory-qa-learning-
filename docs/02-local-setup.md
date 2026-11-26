@@ -1,4 +1,4 @@
-# Installing JFrog Artifactory Locally
+# 02 Installing JFrog Artifactory Locally
 
 ## Overview
 
