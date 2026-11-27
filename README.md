@@ -24,6 +24,7 @@ No previous experience with JFrog is needed.
 | [03 - Artifactory UI](docs/03-artifactory-ui.md) | Finding your way around |
 | [04 - Repositories](docs/04-repository-types.md) | Understanding repository types |
 | [05 - Creating Repositories](docs/05-creating-repositories.md) | Creating repositorys |
+| [06 - Managing Artifacts](docs/06-managing-artifacts.md) | Managing Artifacts |
 
 More notes and examples will be added as I work through them.
 
