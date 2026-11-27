@@ -55,7 +55,7 @@ qa-test-builds/
 └── sample-app-1.2.zip
 ```
 
-![Application versions](../images/06-artifact-versions.png)
+![Application versions](../images/06-artifact-uploaded.png)
 
 *Three versions of our sample application stored in Artifactory.*
 
